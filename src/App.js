@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import EmployeeData from './components/EmployeeData';
+import Clock from './components/Clock';
+import LifeCycleMethods from './components/LifeCycleMethods'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <EmployeeData />
+      <hr/>
+      <p>Clock Component Example</p>
+      <Clock />
+      <hr/>
+      <p>LifeCycle Method Example</p>
+      <LifeCycleMethods myNumber='10'/>
     </div>
   );
 }
